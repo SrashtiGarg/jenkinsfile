@@ -2,9 +2,9 @@ pipeline {
     agent any
 
     stages {
-        stage('Hello') {
+        stage('Git-Clone') {
             steps {
-                echo 'Hello World'
+                git branch: 'main', credentialsId: 'ubuntu-ec2-key', url: 'https://github.com/cloud-blitz/EasyCRUD.git'
             }
         }
     }
