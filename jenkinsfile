@@ -15,7 +15,9 @@ pipeline {
         }
         stage('Test') {
             steps {
-                sh '''mvn clean verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar \\
+                sh '''
+                    cd backend
+                    mvn clean verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar \\
                       -Dsonar.projectKey=MyFirstProject \\
                       -Dsonar.projectName=\'MyFirstProject\' \\
                       -Dsonar.host.url=http://13.126.240.2:9000 \\
