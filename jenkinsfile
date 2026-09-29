@@ -20,9 +20,7 @@ pipeline {
                     cd backend
                     mvn clean verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar \\
                       -Dsonar.projectKey=MyFirstProject \\
-                      -Dsonar.projectName=\'MyFirstProject\' \\
-                      -Dsonar.host.url=http://13.126.240.2:9000 \\
-                      -Dsonar.token=sqp_3903348e07a6e173772f5738013dd840fe1f3730'''
+                      -Dsonar.projectName=\'MyFirstProject\''''
                 }
             }
         }
