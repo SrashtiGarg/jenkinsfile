@@ -24,5 +24,10 @@ pipeline {
                       -Dsonar.token=sqp_3903348e07a6e173772f5738013dd840fe1f3730'''
             }
         }
+        stage('Quality Gate') {
+            steps {
+                waitForQualityGate abortPipeline: true, credentialsId: 'MyId'
+            }
+        }
     }
 }
